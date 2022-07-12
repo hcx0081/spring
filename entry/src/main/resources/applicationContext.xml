@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <!--这是Spring的配置文件-->
+    
+    <!--将指定配置类配置给Spring，让Spring创建其对象实例-->
+    
+    
+    <!--无参构造实例-->
+    <!--<bean id="userDao" class="com.spring.dao.impl.UserDaoImpl" init-method="init" destroy-method="destroy"></bean>-->
+    
+    <!--静态工厂实例-->
+    <!--<bean id="userDao" class="com.spring.factory.StaticFactory" factory-method="getUserDao"></bean>-->
+    
+    <!--实例工厂实例-->
+    <!--<bean id="factory" class="com.spring.factory.DynamicFactory"></bean>-->
+    <!--<bean id="userDao" factory-bean="factory" factory-method="getUserDao"></bean>-->
+    
+    
+    <!--属性 setter 方法注入-->
+    
+    <!--<bean id="userDao" class="com.spring.dao.impl.UserDaoImpl"></bean>-->
+    
+    <!--p命名空间注入-->
+    <!--<bean id="userService" class="com.spring.service.impl.UserServiceImpl" p:userDao-ref="userDao"></bean>-->
+    
+    <bean id="userService" class="com.spring.service.impl.UserServiceImpl">
+        <!--通过该Bean的Setter方法,name的值是该类Setter方法去掉set和将首字母小写-->
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+    
+    
+    <!--构造方法注入-->
+    
+    <!--<bean id="userDao" class="com.spring.dao.impl.UserDaoImpl"></bean>-->
+    
+    <!--c命名空间引入-->
+    <!--<bean id="userService" class="com.spring.service.impl.UserServiceImpl" c:userDao-ref="userDao"></bean>-->
+    
+    <!--<bean id="userService" class="com.spring.service.impl.UserServiceImpl">
+        &lt;!&ndash;name的值是该类构造方法的参数名&ndash;&gt;
+        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+    </bean>-->
+    
+    
+    
+    <!--注入普通数据类型-->
+    <!--<bean id="userDao" class="com.spring.dao.impl.UserDaoImpl">
+        <property name="username" value="hcx"></property>
+        <property name="password" value="123"></property>
+    </bean>-->
+    
+    
+    
+    <!--注入集合数据类型-->
+    <bean id="userDao" class="com.spring.dao.impl.UserDaoImpl">
+        <property name="userList">
+            <list>
+                <value>aaa</value>
+                <value>bbb</value>
+                <value>ccc</value>
+            </list>
+        </property>
+        <property name="userMap">
+            <map>
+                <entry key="m1" value="a"></entry>
+                <entry key="m2" value="b"></entry>
+                <entry key="m3" value="c"></entry>
+            </map>
+        </property>
+        <property name="userProperties">
+            <props>
+                <prop key="p1">a</prop>
+                <prop key="p2">b</prop>
+                <prop key="p3">c</prop>
+            </props>
+        </property>
+    </bean>
+
+
+</beans>
