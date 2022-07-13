@@ -11,8 +11,8 @@ import java.util.Properties;
  */
 public class UserDaoImpl implements UserDao {
 
-//    private String username;
-//    private String password;
+    //private String username;
+    //private String password;
 
     private List userList;
     private Map userMap;
@@ -24,13 +24,13 @@ public class UserDaoImpl implements UserDao {
         System.out.println("UserDaoImpl调用了");
     }
 
-//    public void setUsername(String username) {
-//        this.username = username;
-//    }
-//
-//    public void setPassword(String password) {
-//        this.password = password;
-//    }
+    //public void setUsername(String username) {
+    //    this.username = username;
+    //}
+    //
+    //public void setPassword(String password) {
+    //    this.password = password;
+    //}
 
     public void setUserList(List userList) {
         this.userList = userList;
@@ -62,8 +62,8 @@ public class UserDaoImpl implements UserDao {
     public void say() {
         System.out.println("hello");
 
-//        System.out.println(username);
-//        System.out.println(password);
+        //System.out.println(username);
+        //System.out.println(password);
 
         System.out.println(userList);
         System.out.println(userMap);
