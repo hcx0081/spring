@@ -37,11 +37,11 @@ public class SpringTest {
         UserDao userDao = applicationContext.getBean("userDao", UserDaoImpl.class);
         System.out.println(userDao);/*对象先创建才有初始化方法，所以先调用UserDaoImpl*/
         //UserDaoImpl调用了
-        //执行初始化方法
+        //bean初始化后执行初始化方法
         //com.spring.dao.impl.UserDaoImpl@77847718
 
         ((ClassPathXmlApplicationContext)applicationContext).close();
-        //执行销毁方法
+        //bean销毁前执行销毁方法
     }
 
 
