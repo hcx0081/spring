@@ -61,6 +61,8 @@
                 <value>aaa</value>
                 <value>bbb</value>
                 <value>ccc</value>
+                <!--注入内部bean-->
+                <ref bean="userService"></ref>
             </list>
         </property>
         <property name="userMap">
