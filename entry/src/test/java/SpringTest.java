@@ -15,10 +15,10 @@ public class SpringTest {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         //通过容器获取实例
-//        UserDao userDao1 = (UserDao) applicationContext.getBean("userDao");
+        //UserDao userDao1 = (UserDao) applicationContext.getBean("userDao");
         UserDao userDao1 = applicationContext.getBean("userDao", UserDaoImpl.class);
 
-//        UserDao userDao2 = (UserDao) applicationContext.getBean("userDao");
+        //UserDao userDao2 = (UserDao) applicationContext.getBean("userDao");
         UserDao userDao2 = applicationContext.getBean("userDao", UserDaoImpl.class);
 
         //当配置文件中的scope为singleton
@@ -27,8 +27,7 @@ public class SpringTest {
 
         //当配置文件中的scope为prototype
         /*当获取bean时才调用无参构造器创建bean实例*/
-//        System.out.println(userDao1==userDao2);//false
-
+        //System.out.println(userDao1==userDao2);//false
     }
 
 
@@ -63,7 +62,4 @@ public class SpringTest {
         UserDao userDao = (UserDao) applicationContext.getBean("userDao");
         userDao.say();//hello
     }
-
-
-
 }
