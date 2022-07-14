@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Aspect//定义切面
 public class MyAspect {
     
-    //定义切面表达式
+    //定义切入点表达式
     @Pointcut("execution(* com.spring.aopannotation.*.*(..))")
     //需要使用一个返回值为void，方法体为空的方法来命名切入点
     private void myPointCut() {
@@ -20,7 +20,7 @@ public class MyAspect {
     /**
      * 前置通知
      */
-    @Before("MyAspect.myPointCut()")
+    @Before("MyAspect.myPointCut()")//也可以这样配置切入点表达式
     public void before() {
         System.out.println("前置增强。。。");
     }
