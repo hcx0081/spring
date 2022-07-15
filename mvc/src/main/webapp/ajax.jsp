@@ -11,7 +11,7 @@
         
         $.ajax({
             type:"post",
-            url:"/bind/sayAjax",
+            url:"bind/sayAjax",
             /*
                 这里如果是get请求方法，则参数会跟在url后面，即
                 http://localhost:8080/bind/sayAjax?[{"username":"zs","age":20},{"username":"kobe","age":24}]

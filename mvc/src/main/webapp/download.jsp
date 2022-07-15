@@ -4,6 +4,6 @@
     <title></title>
 </head>
 <body>
-<a href="/uad/download?filename=斯科菲尔德.jpg">下载图片</a>
+<a href="uad/download?filename=斯科菲尔德.jpg">下载图片</a>
 </body>
 </html>

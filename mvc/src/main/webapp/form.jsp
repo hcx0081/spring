@@ -4,7 +4,7 @@
     <title></title>
 </head>
 <body>
-<form action="/bind/sayVo" method="post">
+<form action="bind/sayVo" method="post">
     姓名1：<input type="text" name="userList[0].username"><br>
     年龄1：<input type="text" name="userList[0].age"><br>
     姓名2：<input type="text" name="userList[1].username"><br>
