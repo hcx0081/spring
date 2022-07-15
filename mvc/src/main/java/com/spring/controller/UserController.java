@@ -5,13 +5,17 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.spring.pojo.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Map;
 
 /**
  * @description:控制层
@@ -84,10 +88,40 @@ public class UserController {
         return "success";
     }
     
+    @RequestMapping(value = "/sayMap")
+    public String sayMap(Map<String, Object> map) {
+        //在map中存放数据，相当于request域；在前端可以用EL表达式取出
+        map.put("username", "hcx");
+        return "success";
+    }
+    
+    @RequestMapping(value = "/sayMM")
+    public String sayMM(ModelMap modelMap) {
+        //在modelMap中存放数据，相当于request域；在前端可以用EL表达式取出
+        /*两种方法都可以*/
+        modelMap.put("username", "hcx");
+        //modelMap.addAttribute("username", "hcx");
+        return "success";
+    }
+    
+    
+    @RequestMapping(value = "/sayS")
+    public String sayS(HttpSession session) {
+        session.setAttribute("username", "hcx");
+        return "success";
+    }
+    
+    @RequestMapping(value = "/sayApp")
+    public String sayApp(HttpSession session) {
+        ServletContext servletContext = session.getServletContext();
+        servletContext.setAttribute("username", "hcx");
+        return "success";
+    }
+    
     
     /*
-    * 无返回值 void
-    * */
+     * 无返回值 void
+     * */
     
     @RequestMapping(value = "/sayP")
     public void sayP(HttpServletResponse response) throws IOException {
@@ -107,7 +141,6 @@ public class UserController {
     }
     
     
-    
     @RequestMapping(value = "/sayJson")
     @ResponseBody//将需要回写的字符串或对象直接返回
     public String sayJson() throws JsonProcessingException {
@@ -123,10 +156,9 @@ public class UserController {
     }
     
     
-    
     @RequestMapping(value = "/sayJsonAuto")
     @ResponseBody//将需要回写的字符串或对象直接返回
-    public User sayJsonAuto(){
+    public User sayJsonAuto() {
         User user = new User();
         user.setUsername("hcx");
         user.setAge(20);
@@ -134,10 +166,9 @@ public class UserController {
     }
     
     
-    
     @RequestMapping(value = "/sayDriven")
     @ResponseBody//将需要回写的字符串或对象直接返回
-    public User sayDriven(){
+    public User sayDriven() {
         User user = new User();
         user.setUsername("hcx");
         user.setAge(20);
