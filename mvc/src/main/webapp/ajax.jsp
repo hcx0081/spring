@@ -13,7 +13,7 @@
             type:"post",
             url:"bind/sayAjax",
             /*
-                这里如果是get请求方法，则参数会跟在url后面，即
+                这里如果是get请求方法，则参数会跟在url后面，不在请求体中，即
                 http://localhost:8080/bind/sayAjax?[{"username":"zs","age":20},{"username":"kobe","age":24}]
                 这不是个正确的请求；
                 如果是post则参数在请求体内
