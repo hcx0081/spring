@@ -112,8 +112,9 @@ public class UserController {
     }
     
     @RequestMapping(value = "/sayApp")
-    public String sayApp(HttpSession session) {
-        ServletContext servletContext = session.getServletContext();
+    public String sayApp(/*HttpSession session*/HttpServletRequest request) {
+        //ServletContext servletContext = session.getServletContext();
+        ServletContext servletContext = request.getServletContext();
         servletContext.setAttribute("username", "hcx");
         return "success";
     }
