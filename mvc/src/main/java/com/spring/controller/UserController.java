@@ -83,21 +83,21 @@ public class UserController {
         /*
          * 模型 Model：封装数据
          * */
-        //设置模型数据,在model中存放数据，相当于request域；在前端可以用EL表达式取出
+        //设置模型数据,在model中存放数据，相当于在request域中存放数据；在前端可以用EL表达式取出
         model.addAttribute("username", "hcx");
         return "success";
     }
     
     @RequestMapping(value = "/sayMap")
     public String sayMap(Map<String, Object> map) {
-        //在map中存放数据，相当于request域；在前端可以用EL表达式取出
+        //在map中存放数据，相当于在request域中存放数据；在前端可以用EL表达式取出
         map.put("username", "hcx");
         return "success";
     }
     
     @RequestMapping(value = "/sayMM")
     public String sayMM(ModelMap modelMap) {
-        //在modelMap中存放数据，相当于request域；在前端可以用EL表达式取出
+        //在modelMap中存放数据，相当于在request域中存放数据；在前端可以用EL表达式取出
         /*两种方法都可以*/
         modelMap.put("username", "hcx");
         //modelMap.addAttribute("username", "hcx");
