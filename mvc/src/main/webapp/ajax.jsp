@@ -5,7 +5,7 @@
     <%--引入jQuery--%>
     <script src="webjars/jquery/3.6.0/dist/jquery.js"></script>
     <script>
-        var userlist=new Array();
+        var userlist=[];
         userlist.push({username:"zs",age:20})
         userlist.push({username:"kobe",age:24})
         

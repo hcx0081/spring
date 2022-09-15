@@ -70,7 +70,6 @@ public class UserDataBindController {
      * 利用ajax接收集合参数
      * */
     @RequestMapping("/sayAjax")
-    @ResponseBody//不跳转视图，而是返回字符串或对象
     //@RequestBody用来接收前端传递给后端的json字符串中的数据(请求体中的数据)
     public void sayAjax(@RequestBody List<User> userList){
         System.out.println(userList);//[User{username='zs', age=20}, User{username='kobe', age=24}]
