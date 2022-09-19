@@ -17,24 +17,25 @@ import java.util.List;
 public class UserDataBindController {
     
     /*
-    * http://localhost:8080/bind/saySimp?username=zs&age=20
-    * 业务方法中的参数名称要与请求参数的key一致，参数值会自动映射匹配
-    * */
+     * http://localhost:8080/bind/saySimp?username=zs&age=20
+     * 业务方法中的参数名称要与请求参数的key一致，参数值会自动映射匹配
+     * */
     @RequestMapping("/saySimp")
     @ResponseBody//不跳转视图，而是返回字符串或对象
-    public void saySimp(String username,int age){
+    public void saySimp(String username, int age) {
         System.out.println(username);//zs
         System.out.println(age);//20
     }
     
     
     /*
-    * http://localhost:8080/bind/sayPojo?username=zs&age=20
-    * 业务方法中的 POJO 类的属性名与请求参数的 key 一致，参数值会自动映射匹配
-    * */
+     * http://localhost:8080/bind/sayPojo?username=zs&age=20
+     * http://localhost:8080/bind/sayArray?strs=a,'b',"c"
+     * 业务方法中的 POJO 类的属性名与请求参数的 key 一致，参数值会自动映射匹配
+     * */
     @RequestMapping("/sayPojo")
     @ResponseBody//不跳转视图，而是返回字符串或对象
-    public void sayPojo(User user){
+    public void sayPojo(User user) {
         System.out.println(user);//User{username='zs', age=20}
     }
     
@@ -45,7 +46,7 @@ public class UserDataBindController {
      * */
     @RequestMapping("/sayArray")
     @ResponseBody//不跳转视图，而是返回字符串或对象
-    public void sayArray(String[] strs){
+    public void sayArray(String[] strs) {
         System.out.println(Arrays.asList(strs));//[a, 'b', "c"]
     }
     
@@ -61,7 +62,7 @@ public class UserDataBindController {
      * */
     @RequestMapping("/sayVo")
     @ResponseBody//不跳转视图，而是返回字符串或对象
-    public void sayVo(VO vo){
+    public void sayVo(VO vo) {
         System.out.println(vo);//VO{userList=[User{username='zs', age=20}, User{username='kobe', age=24}]}
     }
     
@@ -71,19 +72,19 @@ public class UserDataBindController {
      * */
     @RequestMapping("/sayAjax")
     //@RequestBody用来接收前端传递给后端的json字符串中的数据(请求体中的数据)
-    public void sayAjax(@RequestBody List<User> userList){
+    public void sayAjax(@RequestBody List<User> userList) {
         System.out.println(userList);//[User{username='zs', age=20}, User{username='kobe', age=24}]
     }
     
     
     /*
-    * http://localhost:8080/bind/sayRP?name=zs
-    * 通过@RequestParam接收请求参数
-    * */
+     * http://localhost:8080/bind/sayRP?name=zs
+     * 通过@RequestParam接收请求参数
+     * */
     @RequestMapping("/sayRP")
     @ResponseBody//不跳转视图，而是返回字符串或对象
     //当请求的参数名称与业务方法参数名称不一致时，使用@RequestParam用来进行将两者对应绑定
-    public void sayRP(@RequestParam("name") String username){
+    public void sayRP(@RequestParam("name") String username) {
         System.out.println(username);//zs
     }
     
@@ -99,29 +100,26 @@ public class UserDataBindController {
      * */
     @RequestMapping("/sayDate")
     @ResponseBody//不跳转视图，而是返回字符串或对象
-    public void sayDate(Date date){
+    public void sayDate(Date date) {
         System.out.println(date);
     }
     
     
     /*
-    * 获取请求头参数
-    * */
+     * 获取请求头参数
+     * */
     
     @RequestMapping("/sayRH")
     @ResponseBody//不跳转视图，而是返回字符串或对象
-    public void sayRH(@RequestHeader("User-Agent") String headerValue){
+    public void sayRH(@RequestHeader("User-Agent") String headerValue) {
         System.out.println(headerValue);//Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0
     }
     
     @RequestMapping("/sayCookie")
     @ResponseBody//不跳转视图，而是返回字符串或对象
-    public void sayCookie(@CookieValue("JSESSIONID") String cookieValue){
+    public void sayCookie(@CookieValue("JSESSIONID") String cookieValue) {
         System.out.println(cookieValue);//0F24761A943766839CE75166C849B3DF
     }
-    
-    
-    
     
     
 }
