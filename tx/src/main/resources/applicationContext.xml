@@ -58,10 +58,10 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
     <!-- </tx:advice> -->
     
     <!-- 配置事务的AOP织入 -->
-    <!-- <aop:config>
-       <aop:pointcut id="txPointCut" expression="execution(* com.spring.service.impl.*.*(..))"/>
-       <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointCut"></aop:advisor>
-    </aop:config> -->
+    <!-- <aop:config> -->
+    <!--    <aop:pointcut id="txPointCut" expression="execution(* com.spring.service.impl.*.*(..))"/> -->
+    <!--    <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointCut"></aop:advisor> -->
+    <!-- </aop:config> -->
     
     <!-- 注册事务注解驱动 -->
     <tx:annotation-driven transaction-manager="transactionManager"></tx:annotation-driven>

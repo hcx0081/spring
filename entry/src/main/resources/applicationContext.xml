@@ -39,17 +39,17 @@
     <!-- c命名空间引入 -->
     <!-- <bean id="userService" class="com.spring.service.impl.UserServiceImpl" c:userDao-ref="userDao"></bean> -->
     
-    <!-- <bean id="userService" class="com.spring.service.impl.UserServiceImpl">
-        &lt;!&ndash; name的值是该类构造方法中的参数名 &ndash;&gt;
-        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
-    </bean> -->
+    <!-- <bean id="userService" class="com.spring.service.impl.UserServiceImpl"> -->
+    <!--     &lt;!&ndash; name的值是该类构造方法中的参数名 &ndash;&gt; -->
+    <!--     <constructor-arg name="userDao" ref="userDao"></constructor-arg> -->
+    <!-- </bean> -->
     
     
     <!-- 注入普通数据类型 -->
-    <!-- <bean id="userDao" class="com.spring.dao.impl.UserDaoImpl">
-        <property name="username" value="zs"></property>
-        <property name="password" value="123"></property>
-    </bean> -->
+    <!-- <bean id="userDao" class="com.spring.dao.impl.UserDaoImpl"> -->
+    <!--     <property name="username" value="zs"></property> -->
+    <!--     <property name="password" value="123"></property> -->
+    <!-- </bean> -->
     
     
     <!-- 注入集合数据类型 -->

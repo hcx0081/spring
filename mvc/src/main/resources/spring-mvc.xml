@@ -27,13 +27,13 @@ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/
     
     
     <!-- 配置处理器适配器 -->
-    <!-- <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
-       <property name="messageConverters">
-           <list>
-               <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean>
-           </list>
-       </property>
-    </bean> -->
+    <!-- <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"> -->
+    <!--    <property name="messageConverters"> -->
+    <!--        <list> -->
+    <!--            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean> -->
+    <!--        </list> -->
+    <!--    </property> -->
+    <!-- </bean> -->
     
     <!-- 配置注解驱动，配置这个集成了上面的配置，做项目前首先配置这个 -->
     <mvc:annotation-driven conversion-service="conversionService"></mvc:annotation-driven>
