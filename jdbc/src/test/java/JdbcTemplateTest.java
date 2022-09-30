@@ -13,10 +13,10 @@ public class JdbcTemplateTest {
     @Test
     public void testJT(){
     
-        //创建Druid数据库连接池
+        // 创建Druid数据库连接池
         DruidDataSource druidDataSource = new DruidDataSource();
     
-        //设置数据库需要的配置信息
+        // 设置数据库需要的配置信息
         druidDataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         druidDataSource.setUrl("jdbc:mysql://localhost:3306/springjdbc?");
         druidDataSource.setUsername("root");
@@ -24,10 +24,10 @@ public class JdbcTemplateTest {
     
         JdbcTemplate jdbcTemplate = new JdbcTemplate();
         
-        //设置数据源对象
+        // 设置数据源对象
         jdbcTemplate.setDataSource(druidDataSource);
     
-        /*无需连接数据池*/
+        /* 无需连接数据池 */
         
         int i = jdbcTemplate.update("insert into account values (?,?)", "wu", 500);
         System.out.println(i);
@@ -42,10 +42,10 @@ public class JdbcTemplateTest {
     
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
     
-        //获取JdbcTemplate实例
+        // 获取JdbcTemplate实例
         JdbcTemplate jdbcTemplate = applicationContext.getBean("jdbcTemplate", JdbcTemplate.class);
     
-        /*无需连接数据池*/
+        /* 无需连接数据池 */
         
         int i = jdbcTemplate.update("insert into account values (?,?)", "zl", 500);
         System.out.println(i);

@@ -10,9 +10,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class UserController {
     public static void main(String[] args) {
-        //初始化Spring容器，加载配置文件
+        // 初始化Spring容器，加载配置文件
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-        //通过容器获取实例
+        // 通过容器获取实例
         UserService userService = applicationContext.getBean("userService", UserServiceImpl.class);
         userService.say();
     }

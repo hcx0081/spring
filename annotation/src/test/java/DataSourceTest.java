@@ -15,7 +15,7 @@ import java.sql.SQLException;
 public class DataSourceTest {
     
     @Test
-    public void springDataSourceTest(){
+    public void springDataSourceTest() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         DataSource dataSource = applicationContext.getBean("dataSource", DataSource.class);
         Connection connection = null;
@@ -28,8 +28,8 @@ public class DataSourceTest {
     }
     
     @Test
-    public void springDataSourceAnoTest(){
-        //Spring容器加载该注解配置类，实现全注解开发
+    public void springDataSourceAnoTest() {
+        // Spring容器加载该注解配置类，实现全注解开发
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringConfiguration.class);
         DruidDataSource dataSource = applicationContext.getBean("dataSource", DruidDataSource.class);
         Connection connection = null;
@@ -40,5 +40,4 @@ public class DataSourceTest {
         }
         System.out.println(connection);
     }
-    
 }

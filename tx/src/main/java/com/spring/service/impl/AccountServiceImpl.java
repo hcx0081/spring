@@ -14,9 +14,9 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private AccountDao accountDao;
     
-    //public void setAccountDao(AccountDao accountDao) {
+    // public void setAccountDao(AccountDao accountDao) {
     //    this.accountDao = accountDao;
-    //}
+    // }
     
     /**
      * 转账
@@ -29,12 +29,12 @@ public class AccountServiceImpl implements AccountService {
     @Transactional
     @Override
     public void transfer(String name1, String name2, double money) {
-        //传统解决方法是在此处开启事务
+        // 传统解决方法是在此处开启事务
         accountDao.withdraw(name1, money);
-        //模拟网络问题故障
+        // 模拟网络问题故障
         int i = 1 / 0;
         accountDao.deposit(name2, money);
-        //传统解决方法是在此处结束事务或回滚
+        // 传统解决方法是在此处结束事务或回滚
     }
 }
 

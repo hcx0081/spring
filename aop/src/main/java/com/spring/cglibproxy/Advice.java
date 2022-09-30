@@ -4,10 +4,11 @@ package com.spring.cglibproxy;
  * @Description:
  */
 public class Advice {
-    public void before(){
+    public void before() {
         System.out.println("前置增强。。。");
     }
-    public void afterReturning(){
+    
+    public void afterReturning() {
         System.out.println("后置增强。。。");
     }
 }

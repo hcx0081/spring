@@ -12,8 +12,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 
-//@ContextConfiguration("classpath:applicationContext.xml")
-@ContextConfiguration(classes = {SpringConfiguration.class})//指定配置文件或配置类
+// @ContextConfiguration("classpath:applicationContext.xml")
+@ContextConfiguration(classes = {SpringConfiguration.class}) // 指定配置文件或配置类
 public class SpringJunitTest {
     
     @Autowired
@@ -22,10 +22,9 @@ public class SpringJunitTest {
     @Test
     public void junitTest() {
         userService.say();
-        //执行初始化方法
-        //hello
-        //root
-        //执行销毁方法
+        // 执行初始化方法
+        // hello
+        // root
+        // 执行销毁方法
     }
-    
 }
