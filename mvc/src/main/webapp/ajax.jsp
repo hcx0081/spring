@@ -2,7 +2,7 @@
 <html>
 <head>
     <title></title>
-    <%--引入jQuery--%>
+    <%-- 引入jQuery --%>
     <script src="webjars/jquery/3.6.0/dist/jquery.js"></script>
     <script>
         var userlist = [];
@@ -19,7 +19,7 @@
             * 如果是post则参数在请求体内
             *  */
             data: JSON.stringify(userlist),
-            /* 当请求数据为json格式时，contentType必须为application/json */
+            /* 当请求数据为JSON格式时，contentType必须为application/json */
             contentType: "application/json;charset=utf-8",
         })
     </script>

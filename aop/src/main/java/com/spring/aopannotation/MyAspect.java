@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * @Description:
  */
 @Component
-@Aspect // 定义切面
+@Aspect// 定义切面
 public class MyAspect {
     
     // 定义切入点表达式
@@ -20,7 +20,7 @@ public class MyAspect {
     /**
      * 前置通知
      */
-    @Before("MyAspect.myPointCut()") // 也可以这样配置切入点表达式
+    @Before("MyAspect.myPointCut()")// 也可以这样配置切入点表达式
     public void before() {
         System.out.println("前置增强。。。");
     }
@@ -45,7 +45,7 @@ public class MyAspect {
     @Around("myPointCut()")
     public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         System.out.println("环绕前增强。。。");
-        Object proceed = proceedingJoinPoint.proceed(); // 切点方法
+        Object proceed = proceedingJoinPoint.proceed();// 切点方法
         System.out.println("环绕后增强。。。");
         return proceed;
     }

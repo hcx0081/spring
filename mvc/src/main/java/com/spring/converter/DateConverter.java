@@ -12,7 +12,7 @@ import java.util.Date;
 public class DateConverter implements Converter<String, Date> {
     @Override
     public Date convert(String source) {
-        //将日期字符串转换为日期对象
+        // 将日期字符串转换为日期对象
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         Date date = null;
         try {

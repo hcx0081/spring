@@ -5,20 +5,20 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <!--需要引入命名空间，注意看头部-->
-    <!--加载外部的properties文件-->
+    <!-- 需要引入命名空间，注意看头部 -->
+    <!-- 加载外部的properties文件 -->
     <context:property-placeholder location="jdbc.properties"/>
-    <!--数据池对象-->
+    <!-- 数据池对象 -->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="${jdbc.driverClassName}"></property>
         <property name="url" value="${jdbc.url}"></property>
         <property name="username" value="${jdbc.username}"></property>
         <property name="password" value="${jdbc.password}"></property>
     </bean>
-
-    <!--JdbcTemplate对象-->
+    
+    <!-- JdbcTemplate对象 -->
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-        <!--JdbcTemplate对象中有setDataSource()方法，所以通过setter方法将数据源注入-->
+        <!-- JdbcTemplate对象中有setDataSource()方法，所以通过属性Setter方法将数据源注入 -->
         <property name="dataSource" ref="dataSource"></property>
     </bean>
 

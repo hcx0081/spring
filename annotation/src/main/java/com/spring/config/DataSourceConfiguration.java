@@ -34,7 +34,7 @@ public class DataSourceConfiguration {
     //     <property name="username" value="${jdbc.username}"></property>
     //     <property name="password" value="${jdbc.password}"></property>
     // </bean>
-    @Bean("dataSource") // 使用在方法上，标注将该方法的返回值作为组件以指定名称存储到Spring容器中。
+    @Bean("dataSource")// 使用在方法上，标注将该方法的返回值作为组件以指定名称存储到Spring容器中。
     public DataSource getDataSource() {
         DruidDataSource druidDataSource = new DruidDataSource();
         druidDataSource.setDriverClassName(driverClassName);

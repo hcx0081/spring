@@ -4,54 +4,54 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     
-    <!--全局初始化参数，配置核心配置文件-->
+    <!-- 全局初始化参数，配置核心配置文件 -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
     
-    <!--配置监听器（自定义的）-->
-    <!--<listener>
-        <listener-class>com.spring.listener.ContextLoaderListenerByCustom</listener-class>
-    </listener>-->
+    <!-- 配置监听器（自定义的） -->
+    <!-- <listener> -->
+    <!--     <listener-class>com.spring.listener.ContextLoaderListenerByCustom</listener-class> -->
+    <!-- </listener> -->
     
-    <!--配置监听器（spring-web依赖自带的，即框架封装的）-->
+    <!-- 配置监听器（spring-web依赖自带的，即框架封装的） -->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
     
     
-    <!--配置springmvc前端控制器-->
+    <!-- 配置springmvc前端控制器 -->
     <servlet>
         <servlet-name>dispatcherServlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        <!--初始化时加载核心配置文件（注意要放到<load-on-startup>标签上面）-->
+        <!-- 初始化时加载核心配置文件（注意要放到<load-on-startup>标签上面） -->
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>classpath:spring-mvc.xml</param-value>
         </init-param>
-        <load-on-startup>1</load-on-startup><!--表示容器一启动就加载-->
+        <load-on-startup>1</load-on-startup><!-- 表示容器一启动就加载 -->
     </servlet>
     <servlet-mapping>
         <servlet-name>dispatcherServlet</servlet-name>
-        <!--配置全局，将所有路径型url拦截-->
+        <!-- 配置全局，将所有路径型url拦截 -->
         <url-pattern>/</url-pattern>
     </servlet-mapping>
     
     
-    <!--配置全局过滤的防止中文乱码的filter-->
+    <!-- 配置全局过滤的防止中文乱码的filter -->
     <filter>
         <filter-name>characterEncodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
         <init-param>
-            <!--初始化参数名必须是encoding，因为源码里的变量就是encoding-->
+            <!-- 初始化参数名必须是encoding，因为源码里的变量就是encoding -->
             <param-name>encoding</param-name>
             <param-value>utf-8</param-value>
         </init-param>
     </filter>
     <filter-mapping>
         <filter-name>characterEncodingFilter</filter-name>
-        <!--对所有的url进行过滤-->
+        <!-- 对所有的url进行过滤 -->
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 

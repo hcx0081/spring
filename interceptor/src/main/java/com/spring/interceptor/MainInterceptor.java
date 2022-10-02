@@ -19,7 +19,7 @@ public class MainInterceptor implements HandlerInterceptor {
             return true;
         } else {
             System.out.println("执行拦截器----用户不存在，不放行");
-            //重定向至登录界面
+            // 重定向至登录界面
             response.sendRedirect("/login.jsp");
             return false;
         }

@@ -30,41 +30,41 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-    
-    
+        
+        
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>5.3.20</version>
         </dependency>
-    
+        
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
             <version>5.3.20</version>
         </dependency>
-    
-        <!--mysql连接驱动-->
+        
+        <!-- mysql连接驱动 -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.29</version>
         </dependency>
-        <!--druid数据源-->
+        <!-- druid数据源 -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>1.2.11</version>
         </dependency>
-    
-        <!--AspectJ-->
+        
+        <!-- AspectJ -->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
             <version>1.9.9.1</version>
         </dependency>
-
-
+    
+    
     </dependencies>
     
     <build>

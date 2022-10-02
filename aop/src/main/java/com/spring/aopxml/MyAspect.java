@@ -31,7 +31,7 @@ public class MyAspect {
      */
     public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         System.out.println("环绕前增强。。。");
-        Object proceed = proceedingJoinPoint.proceed();//切点方法
+        Object proceed = proceedingJoinPoint.proceed();// 切点方法
         System.out.println("环绕后增强。。。");
         return proceed;
     }

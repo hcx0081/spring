@@ -4,6 +4,8 @@
     <title></title>
 </head>
 <body>
-<a href="/login"><button>登录</button></a>
+<a href="/login">
+    <button>登录</button>
+</a>
 </body>
 </html>

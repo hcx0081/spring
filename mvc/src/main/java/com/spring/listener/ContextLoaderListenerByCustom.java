@@ -6,8 +6,11 @@ package com.spring.listener;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+import javax.servlet.http.HttpSessionAttributeListener;
+import javax.servlet.http.HttpSessionListener;
 
 public class ContextLoaderListenerByCustom implements ServletContextListener, HttpSessionListener, HttpSessionAttributeListener {
     
@@ -16,14 +19,14 @@ public class ContextLoaderListenerByCustom implements ServletContextListener, Ht
         
         ServletContext servletContext = sce.getServletContext();
         
-        /*手动获取Spring应用上下文对象*/
-        //ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");//相当于下面
+        /* 手动获取Spring应用上下文对象 */
+        // ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");// 相当于下面
         
-        /*获取ServletContext全局配置对应参数名的值，从值中获取Spring应用上下文对象*/
+        /* 获取ServletContext全局配置对应参数名的值，从值中获取Spring应用上下文对象 */
         String contextConfigLocation = servletContext.getInitParameter("contextConfigLocation");
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext(contextConfigLocation);
         
-        /*将Spring应用上下文对象存储到ServletContext域中*/
+        /* 将Spring应用上下文对象存储到ServletContext域中 */
         servletContext.setAttribute("applicationContext", applicationContext);
         
         System.out.println("Spring容器创建完毕");

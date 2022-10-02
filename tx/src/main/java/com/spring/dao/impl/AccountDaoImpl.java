@@ -13,9 +13,9 @@ public class AccountDaoImpl implements AccountDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
     
-    //public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+    // public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
     //    this.jdbcTemplate = jdbcTemplate;
-    //}
+    // }
     
     /**
      * 取款

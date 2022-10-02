@@ -6,7 +6,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-
+    
     <mvc:annotation-driven/>
     
     <mvc:default-servlet-handler/>
@@ -14,33 +14,32 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
     <context:component-scan base-package="com.spring.controller"></context:component-scan>
     
     
-    <!--配置视图解析器-->
+    <!-- 配置视图解析器 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
     
     
+    <!-- 自定义异常解析器和简单映射异常解析器谁的顺序在上，就执行谁 -->
     
-    <!--自定义异常解析器和简单映射异常解析器谁的顺序在上，就执行谁-->
+    <!-- 配置自定义异常解析器 -->
+    <!-- <bean class="com.spring.resolver.CustomExceptionResolver"></bean> -->
     
-    <!--配置自定义异常解析器-->
-    <!--<bean class="com.spring.resolver.CustomExceptionResolver"></bean>-->
-    
-    <!--配置简单映射异常处理器-->
-    <!--<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
-        &lt;!&ndash;定义默认的异常响应页面&ndash;&gt;
-        <property name="defaultErrorView" value="WEB-INF/errorDefault"></property>&lt;!&ndash;视图名称没有后缀是因为配置了视图解析器&ndash;&gt;
+    <!-- 配置简单映射异常处理器 -->
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <!-- 定义默认的异常响应页面 -->
+        <property name="defaultErrorView" value="WEB-INF/errorDefault"></property><!-- 视图名称没有后缀是因为配置了视图解析器 -->
         
-        &lt;!&ndash;指定具体的不同类型的异常所对应的异常响应页面&ndash;&gt;
+        <!-- 指定具体的不同类型的异常所对应的异常响应页面 -->
         <property name="exceptionMappings">
             <map>
-                &lt;!&ndash;自定义异常时跳转&ndash;&gt;
-                <entry key="com.spring.exception.CustomException" value="errorCustom"></entry>&lt;!&ndash;视图名称没有后缀是因为配置了视图解析器&ndash;&gt;
-                &lt;!&ndash;类型转换异常时跳转&ndash;&gt;
-                <entry key="java.lang.ClassCastException" value="errorCC"></entry>&lt;!&ndash;视图名称没有后缀是因为配置了视图解析器&ndash;&gt;
+                <!-- 自定义异常时跳转 -->
+                <entry key="com.spring.exception.CustomException" value="errorCustom"></entry><!--视图名称没有后缀是因为配置了视图解析器-->
+                <!-- 类型转换异常时跳转 -->
+                <entry key="java.lang.ClassCastException" value="errorCC"></entry><!-- 视图名称没有后缀是因为配置了视图解析器 -->
             </map>
         </property>
-    </bean>-->
-    
+    </bean>
+
 </beans>

@@ -15,7 +15,7 @@ import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 
-@ContextConfiguration("classpath:applicationContext.xml") // 加载指定配置文件或配置类
+@ContextConfiguration("classpath:applicationContext.xml")// 加载指定配置文件或配置类
 public class JdbcTemplateCRUDTest {
     
     // 注入JdbcTemplate
@@ -41,12 +41,12 @@ public class JdbcTemplateCRUDTest {
     @Test
     public void testQueryOne() {
         Account account = jdbcTemplate.queryForObject("select * from  account where name=?", new BeanPropertyRowMapper<>(Account.class), "zs");
-        System.out.println(account); // Account{name='zs', money='100000'}
+        System.out.println(account);// Account{name='zs', money='100000'}
     }
     
     @Test
     public void testQueryCount() {
         Long query = jdbcTemplate.queryForObject("select count(*) from  account where name=?", Long.class, "zs");
-        System.out.println(query); // 1
+        System.out.println(query);// 1
     }
 }

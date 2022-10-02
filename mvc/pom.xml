@@ -36,17 +36,17 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-    
-    
-        <!--spring-webmvc，这个包依赖于其他包，所以也就导入了其他包-->
+        
+        
+        <!-- spring-webmvc，这个包依赖于其他包，所以也就导入了其他包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>5.3.20</version>
         </dependency>
-    
-    
-        <!--jackson-->
+        
+        
+        <!-- jackson -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
@@ -62,10 +62,9 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.13.2.2</version>
         </dependency>
-    
-    
-    
-        <!--引入jQuery-->
+        
+        
+        <!-- 引入jQuery -->
         <dependency>
             <groupId>org.webjars.bower</groupId>
             <artifactId>jquery</artifactId>
@@ -73,8 +72,7 @@
         </dependency>
         
         
-        
-        <!--文件上传-->
+        <!-- 文件上传 -->
         <dependency>
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
@@ -85,10 +83,8 @@
             <artifactId>commons-io</artifactId>
             <version>2.11.0</version>
         </dependency>
-
-
-
-
+    
+    
     </dependencies>
     
     <build>
