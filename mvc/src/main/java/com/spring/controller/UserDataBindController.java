@@ -71,7 +71,7 @@ public class UserDataBindController {
      * 利用AJAX接收集合参数
      * */
     @RequestMapping("/sayAjax")
-    // @RequestBody用来接收前端传递给后端的JSON字符串中的数据(请求体中的数据)
+    // @RequestBody用于接收前端传递给后端的JSON字符串中的数据(请求体中的数据)
     public void sayAjax(@RequestBody List<User> userList) {
         System.out.println(userList);// [User{username='zs', age=20}, User{username='kobe', age=24}]
     }
@@ -83,7 +83,7 @@ public class UserDataBindController {
      * */
     @RequestMapping("/sayRP")
     @ResponseBody// 不跳转视图，而是返回字符串或对象
-    // 当请求的参数名称与业务方法参数名称不一致时，使用@RequestParam用来进行将两者对应绑定
+    // 当请求的参数名称与业务方法参数名称不一致时，使用@RequestParam用于进行将两者对应绑定
     public void sayRP(@RequestParam("name") String username) {
         System.out.println(username);// zs
     }
