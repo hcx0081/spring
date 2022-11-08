@@ -18,7 +18,7 @@ public class UserServiceImpl implements UserService {
     public UserServiceImpl() {
     }
     
-    // 添加构造方法，用于实现依赖
+    // 添加构造器，用于实现依赖
     public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
     }
