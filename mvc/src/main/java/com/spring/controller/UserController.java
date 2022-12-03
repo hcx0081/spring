@@ -25,7 +25,7 @@ import java.util.Map;
 @RequestMapping("/user")
 public class UserController {
     
-    //请 求地址：http://localhost:8080/user/say
+    // 请求地址：http://localhost:8080/user/say
     @RequestMapping(value = "/say")
     public String say() {
         return "success";
@@ -126,7 +126,7 @@ public class UserController {
     
     @RequestMapping(value = "/sayP")
     public void sayP(HttpServletResponse response) throws IOException {
-        response.setContentType("text/html;charset=utf-8");//　不加会出现?乱码
+        response.setContentType("text/html;charset=utf-8");// 不加会出现?乱码
         response.getWriter().print("直接返回字符串");
     }
     

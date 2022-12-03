@@ -18,10 +18,11 @@ public class UserDataBindController {
     
     /*
      * http://localhost:8080/bind/saySimp?username=zs&age=20
-     * 业务方法中的参数名称要与请求参数的key一致，参数值会自动映射匹配
+     * http://localhost:8080/bind/saySimp?age=20&username=zs
+     * 业务方法中的参数名称要与请求参数的key一致，即使顺序不一致，参数值也会自动映射匹配
      * */
     @RequestMapping("/saySimp")
-    @ResponseBody//不跳转视图，而是返回字符串或对象
+    @ResponseBody// 不跳转视图，而是返回字符串或对象
     public void saySimp(String username, int age) {
         System.out.println(username);// zs
         System.out.println(age);// 20
@@ -30,8 +31,8 @@ public class UserDataBindController {
     
     /*
      * http://localhost:8080/bind/sayPojo?username=zs&age=20
-     * http://localhost:8080/bind/sayArray?strs=a,'b',"c"
-     * 业务方法中的POJO类的属性名与请求参数的key一致，参数值会自动映射匹配
+     * http://localhost:8080/bind/sayPojo?age=20&username=zs
+     * 业务方法中的POJO类型的参数的属性名与请求参数的key一致，即使顺序不一致，参数值也会自动映射匹配
      * */
     @RequestMapping("/sayPojo")
     @ResponseBody// 不跳转视图，而是返回字符串或对象
@@ -42,7 +43,8 @@ public class UserDataBindController {
     
     /*
      * http://localhost:8080/bind/sayArray?strs=a&strs='b'&strs="c"
-     * 业务方法中的数组名称与请求参数的 key 一致，参数值会自动映射匹配。
+     * http://localhost:8080/bind/sayArray?strs=a,'b',"c"
+     * 业务方法中的数组名称与请求参数的key一致，参数值会自动映射匹配。
      * */
     @RequestMapping("/sayArray")
     @ResponseBody// 不跳转视图，而是返回字符串或对象
@@ -56,7 +58,7 @@ public class UserDataBindController {
      * 表单get方法提交后的地址栏，如果想要直接在地址栏访问得这样写
      *
      * http://localhost:8080/bind/sayVo?userList[0].username=zs&userList[0].age=20&userList[1].username=kobe&userList[1].age=24
-     * 如果这样直接在地址栏访问，不可以，因为浏览器解析不了中括号
+     * 如果这样直接在地址栏访问，不可以，因为浏览器会编码符号
      *
      * 获得集合参数时，业务方法不支持直接使用集合形参进行数据绑定，要将集合参数包装到一个POJO中才可以
      * */
