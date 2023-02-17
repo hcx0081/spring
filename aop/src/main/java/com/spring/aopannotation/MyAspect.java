@@ -10,10 +10,9 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect// 定义切面
 public class MyAspect {
-    
     // 定义切入点表达式
     @Pointcut("execution(* com.spring.aopannotation.*.*(..))")
-    // 需要使用一个返回值为void，方法体为空的方法来命名切入点
+    // 需要使用一个返回值为void，方法体为空的方法命名切入点
     private void myPointCut() {
     }
     
@@ -36,7 +35,7 @@ public class MyAspect {
     /**
      * 环绕通知
      * 1.返回类型必须为Object类型
-     * 2.必须接受一个ProceedingJoinPoint类型的参数
+     * 2.必须接收一个ProceedingJoinPoint类型的参数
      * 3.必须抛出异常
      *
      * @param proceedingJoinPoint 切入点
@@ -45,7 +44,7 @@ public class MyAspect {
     @Around("myPointCut()")
     public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         System.out.println("环绕前增强。。。");
-        Object proceed = proceedingJoinPoint.proceed();// 切点方法
+        Object proceed = proceedingJoinPoint.proceed();// 切入点方法
         System.out.println("环绕后增强。。。");
         return proceed;
     }

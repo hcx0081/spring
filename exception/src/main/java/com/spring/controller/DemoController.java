@@ -31,7 +31,7 @@ public class DemoController {
     
     @RequestMapping("/showEH")
     public String showEH() {
-        demoService.show1();//抛出类型转换异常
+        demoService.show1();// 抛出类型转换异常
         return "index";
     }
     

@@ -4,6 +4,6 @@
     <title></title>
 </head>
 <body>
-主页 ${name}
+    主页 ${name}
 </body>
 </html>

@@ -23,7 +23,7 @@ public class MyAspect {
     /**
      * 环绕通知
      * 1.返回类型必须为Object类型
-     * 2.必须接受一个ProceedingJoinPoint类型的参数
+     * 2.必须接收一个ProceedingJoinPoint类型的参数
      * 3.必须抛出异常
      *
      * @param proceedingJoinPoint 切入点
@@ -31,7 +31,7 @@ public class MyAspect {
      */
     public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         System.out.println("环绕前增强。。。");
-        Object proceed = proceedingJoinPoint.proceed();// 切点方法
+        Object proceed = proceedingJoinPoint.proceed();// 切入点方法
         System.out.println("环绕后增强。。。");
         return proceed;
     }

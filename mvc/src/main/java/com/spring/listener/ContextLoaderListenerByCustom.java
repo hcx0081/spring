@@ -13,10 +13,8 @@ import javax.servlet.http.HttpSessionAttributeListener;
 import javax.servlet.http.HttpSessionListener;
 
 public class ContextLoaderListenerByCustom implements ServletContextListener, HttpSessionListener, HttpSessionAttributeListener {
-    
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        
         ServletContext servletContext = sce.getServletContext();
         
         /* 手动获取Spring应用上下文对象 */

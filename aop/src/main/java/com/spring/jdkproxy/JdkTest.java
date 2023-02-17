@@ -14,7 +14,8 @@ public class JdkTest {
         // 增强对象
         Advice advice = new Advice();
         // 返回值为动态生成的代理对象
-        TargetDao proxy = (TargetDao) Proxy.newProxyInstance(targetDao.getClass().getClassLoader(),
+        TargetDao proxy = (TargetDao) Proxy.newProxyInstance(
+                targetDao.getClass().getClassLoader(),
                 targetDao.getClass().getInterfaces(),
                 new InvocationHandler() {
                     @Override

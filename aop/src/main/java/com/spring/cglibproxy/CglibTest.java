@@ -27,7 +27,6 @@ public class CglibTest {
         enhancer.setCallback(new MethodInterceptor() {
             @Override
             public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
-                
                 // 前置增强
                 advice.before();
                 
@@ -37,7 +36,6 @@ public class CglibTest {
                 // 后置增强
                 advice.afterReturning();
                 return invoke;
-                
             }
         });
         

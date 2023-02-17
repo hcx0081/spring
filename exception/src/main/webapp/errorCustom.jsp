@@ -4,6 +4,6 @@
     <title></title>
 </head>
 <body>
-自定义error ${info}
+    自定义error ${info}
 </body>
 </html>

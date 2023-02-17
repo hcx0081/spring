@@ -3,16 +3,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import java.sql.SQLException;
-
 /**
  * @description:
  */
 public class JdbcTemplateTest {
-    
     @Test
     public void testJT() {
-        
         // 创建Druid数据库连接池
         DruidDataSource druidDataSource = new DruidDataSource();
         
@@ -38,8 +34,7 @@ public class JdbcTemplateTest {
      * 测试通过Spring容器获取装配好的JdbcTemplate
      */
     @Test
-    public void testJTDI() throws SQLException {
-        
+    public void testJTDI() {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         
         // 获取JdbcTemplate实例

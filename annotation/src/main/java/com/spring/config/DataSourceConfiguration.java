@@ -14,8 +14,6 @@ import javax.sql.DataSource;
 // <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
 @PropertySource("classpath:jdbc.properties")
 public class DataSourceConfiguration {
-    
-    
     @Value("${jdbc.driverClassName}")
     private String driverClassName;
     

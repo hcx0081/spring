@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
@@ -35,7 +35,7 @@ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/
     <!--    </property> -->
     <!-- </bean> -->
     
-    <!-- 配置注解驱动，配置这个集成了上面的配置，做项目前首先配置这个 -->
+    <!-- 配置注解驱动，配置这个集成了上面的配置，开发项目前首先配置这个 -->
     <mvc:annotation-driven conversion-service="conversionService"></mvc:annotation-driven>
     
     
@@ -71,7 +71,7 @@ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/
         <property name="maxUploadSize" value="5242800"></property>
         <!-- 上传单个文件的大小 -->
         <property name="maxUploadSizePerFile" value="5242800"></property>
-        <!-- 上传文件的编码格式，必须与jsp中的pageEncoding属性一致，默认为ISO-8859-1 -->
+        <!-- 上传文件的编码格式，必须与JSP中的pageEncoding属性一致，默认值为ISO-8859-1 -->
         <property name="defaultEncoding" value="utf-8"></property>
     </bean>
 

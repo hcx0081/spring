@@ -22,12 +22,11 @@ import java.util.List;
 @Controller
 @RequestMapping("/uad")
 public class UserUADController {
-    
     /*
      * 单文件上传
      * */
     @RequestMapping("/uploadS")
-    // 上传的文件被封装到MultipartFile接口类型的参数multipartFile中，注意上传表单项的参数名要和形参对应
+    // 上传的文件被封装到MultipartFile接口类型的参数multipartFile中，注意上传表单项的名称要和形参名称对应
     public void uploadS(@RequestParam("upload") MultipartFile multipartFile) throws IOException {
         // 获取文件原始名称
         String originalFilename = multipartFile.getOriginalFilename();
@@ -41,7 +40,7 @@ public class UserUADController {
      * 多文件上传
      * */
     @RequestMapping("/uploadM")
-    // 上传的文件集合被封装到List<MultipartFile>集合类型的参数multipartFile中，注意上传表单项的参数名要和形参对应
+    // 上传的文件集合被封装到List<MultipartFile>集合类型的参数multipartFile中，注意上传表单项的名称要和形参名称对应
     public void uploadM(@RequestParam("upload") List<MultipartFile> multipartFile) throws IOException {
         System.out.println(multipartFile);
         for (MultipartFile file : multipartFile) {
@@ -64,7 +63,7 @@ public class UserUADController {
         String path = request.getServletContext().getRealPath("/file");
         System.out.println(path);// D:\-\IDEA\IntelliJ IDEA 2021.3.2\Workspace\Spring\MVC\target\MVC-1.0-SNAPSHOT\file
         // 创建该文件对象
-        File file = new File(path + File.separator + downloadFilename);//File.separator是分隔符，即正斜线或反斜线
+        File file = new File(path + File.separator + downloadFilename);// File.separator是分隔符，即正斜线或反斜线
         System.out.println(file);// D:\-\IDEA\IntelliJ IDEA 2021.3.2\Workspace\Spring\MVC\target\MVC-1.0-SNAPSHOT\file\斯科菲尔德.jpg
         
         // 设置响应头

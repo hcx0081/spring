@@ -17,7 +17,6 @@ import java.util.List;
 
 @ContextConfiguration("classpath:applicationContext.xml")// 加载指定配置文件或配置类
 public class JdbcTemplateCRUDTest {
-    
     // 注入JdbcTemplate
     @Autowired
     private JdbcTemplate jdbcTemplate;

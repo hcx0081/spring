@@ -9,7 +9,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @description:
  */
 public class iocTest {
-    
     public static void main(String[] args) {
         // 初始化Spring容器，加载配置文件
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -21,5 +20,4 @@ public class iocTest {
         userDao.say();//　hello
         bean.say();//　hello
     }
-    
 }

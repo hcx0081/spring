@@ -27,7 +27,7 @@ public class SpringTest {
         
         // 当配置文件中的scope为prototype
         /* 当获取Bean时才调用无参构造器创建Bean实例 */
-        // System.out.println(userDao1==userDao2);// false
+        // System.out.println(userDao1 == userDao2);// false
     }
     
     

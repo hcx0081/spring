@@ -4,6 +4,6 @@
     <title></title>
 </head>
 <body>
-index ${info}
+    index ${info}
 </body>
 </html>

@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
     @Resource(name = "userDao")// 相当于@Autowired+@Qualifier
     private UserDao userDao;
     
-    /* 如果通过注解装配可以省略不用写setter方法，注解会通过反射将属性注入到实例中 */
+    /* 如果通过注解装配可以省略不用编写Setter方法，注解会通过反射将属性注入到实例中 */
     /* public void setUserDao(UserDao userDao) {
        this.userDao = userDao;
     } */

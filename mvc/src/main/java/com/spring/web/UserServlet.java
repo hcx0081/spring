@@ -33,9 +33,4 @@ public class UserServlet extends HttpServlet {
         UserService userService = applicationContext.getBean("userService", UserServiceImpl.class);
         userService.say();
     }
-    
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    
-    }
 }

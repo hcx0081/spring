@@ -15,6 +15,8 @@ public class AopTest {
     // @Resource(name = "target")
     @Autowired
     private TargetDao target;// 一定要使用接口注入
+    @Autowired
+    private com.spring.aopannotation.TargetDao targetDao;// 一定要使用接口注入
     
     @Test
     public void aopxmlTest() {
@@ -22,9 +24,6 @@ public class AopTest {
         // TargetDao target = applicationContext.getBean("target", TargetDao.class);
         target.save();
     }
-    
-    @Autowired
-    private com.spring.aopannotation.TargetDao targetDao;// 一定要使用接口注入
     
     @Test
     public void aopannotationTest() {

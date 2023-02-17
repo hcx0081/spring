@@ -15,7 +15,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 // @ContextConfiguration("classpath:applicationContext.xml")
 @ContextConfiguration(classes = {SpringConfiguration.class})// 指定配置文件或配置类
 public class SpringJunitTest {
-    
     @Autowired
     private UserService userService;
     
