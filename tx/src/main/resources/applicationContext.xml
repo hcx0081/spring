@@ -8,7 +8,6 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
     
     
-    <!-- 需要引入命名空间，注意看头部 -->
     <context:property-placeholder location="jdbc.properties"/>
     <!-- 数据池对象 -->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
