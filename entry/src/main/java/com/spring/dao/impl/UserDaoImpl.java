@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
- * @description:
+ * {@code @Description:}
  */
 public class UserDaoImpl implements UserDao {
     
@@ -20,7 +20,7 @@ public class UserDaoImpl implements UserDao {
     
     
     public UserDaoImpl() {
-        System.out.println("UserDaoImpl调用了");
+        System.out.println("UserDaoImpl()调用了");
     }
     
     // public void setUsername(String username) {

@@ -6,7 +6,6 @@
 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     
     <!-- 需要引入命名空间，注意看头部 -->
-    <!-- 加载外部的properties文件 -->
     <context:property-placeholder location="jdbc.properties"/>
     <!-- 数据池对象 -->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">

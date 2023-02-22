@@ -1,7 +1,7 @@
 package com.spring.pojo;
 
 /**
- * @description: 账户实体类
+ * {@code @Description:} 账户实体类
  */
 public class Account {
     private String name;

@@ -4,7 +4,7 @@ import com.spring.dao.UserDao;
 import com.spring.service.UserService;
 
 /**
- * @description:
+ * {@code @Description:}
  */
 public class UserServiceImpl implements UserService {
     
@@ -13,12 +13,12 @@ public class UserServiceImpl implements UserService {
     public UserServiceImpl() {
     }
     
-    // 添加构造器，用于实现依赖注入
+    // 添加有参构造器，用于实现依赖注入
     public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
     }
     
-    // 添加UserDao属性的Setter方法，用于实现依赖
+    // 添加UserDao属性的Setter方法，用于实现依赖注入
     public void setUserDao(UserDao userDao) {
         this.userDao = userDao;
     }

@@ -3,7 +3,7 @@ package com.spring.aopannotation;
 import org.springframework.stereotype.Component;
 
 /**
- * @Description:
+ * {@code @Description:}
  */
 @Component
 public class TargetDaoImpl implements TargetDao {

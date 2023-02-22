@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * @Description:
+ * {@code @Description:}
  */
 public class JdkTest {
     public static void main(String[] args) {

@@ -5,7 +5,7 @@ import com.spring.exception.CustomException;
 import java.io.FileNotFoundException;
 
 /**
- * @description:
+ * {@code @Description:}
  */
 public interface DemoService {
     

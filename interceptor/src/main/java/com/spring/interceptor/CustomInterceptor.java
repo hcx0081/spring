@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @description: 自定义拦截器
+ * {@code @Description:} 自定义拦截器
  */
 public class CustomInterceptor implements HandlerInterceptor {
     

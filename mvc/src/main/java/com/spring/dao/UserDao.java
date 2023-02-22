@@ -1,7 +1,7 @@
 package com.spring.dao;
 
 /**
- * @description:
+ * {@code @Description:}
  */
 public interface UserDao {
     public void say();

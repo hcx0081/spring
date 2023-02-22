@@ -1,7 +1,7 @@
 package com.spring.cglibproxy;
 
 /**
- * @Description:
+ * {@code @Description:}
  */
 public class Target {
     public void save() {

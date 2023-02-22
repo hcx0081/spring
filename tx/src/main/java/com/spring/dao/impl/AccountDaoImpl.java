@@ -6,7 +6,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 /**
- * @Description:
+ * {@code @Description:}
  */
 @Repository
 public class AccountDaoImpl implements AccountDao {

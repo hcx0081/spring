@@ -1,7 +1,7 @@
 package com.spring.pojo;
 
 /**
- * @description:
+ * {@code @Description:}
  */
 public class User {
     private String username;

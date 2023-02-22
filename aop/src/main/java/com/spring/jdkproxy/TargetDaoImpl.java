@@ -1,7 +1,7 @@
 package com.spring.jdkproxy;
 
 /**
- * @Description:
+ * {@code @Description:}
  */
 public class TargetDaoImpl implements TargetDao {
     @Override

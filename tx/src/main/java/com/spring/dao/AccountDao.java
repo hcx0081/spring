@@ -1,7 +1,7 @@
 package com.spring.dao;
 
 /**
- * @Description:
+ * {@code @Description:}
  */
 public interface AccountDao {
     /**

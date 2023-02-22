@@ -1,6 +1,6 @@
 package com.spring.web;
 /**
- * @description: ${description}
+ * {@code @Description:} ${description}
  */
 
 import com.spring.service.UserService;

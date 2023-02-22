@@ -1,7 +1,7 @@
 package com.spring.service;
 
 /**
- * @Description:
+ * {@code @Description:}
  */
 public interface AccountService {
     /**

@@ -4,7 +4,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
- * @description:
+ * {@code @Description:}
  */
 public class JdbcTemplateTest {
     @Test
@@ -31,7 +31,7 @@ public class JdbcTemplateTest {
     
     
     /**
-     * 测试通过Spring容器获取装配好的JdbcTemplate
+     * 测试通过Spring容器获取已经注册的JdbcTemplate
      */
     @Test
     public void testJTDI() {

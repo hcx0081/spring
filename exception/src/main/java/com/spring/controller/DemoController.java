@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.io.FileNotFoundException;
 
 /**
- * @description:
+ * {@code @Description:}
  */
 @Controller
 public class DemoController {

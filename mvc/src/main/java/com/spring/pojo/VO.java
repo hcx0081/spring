@@ -3,7 +3,7 @@ package com.spring.pojo;
 import java.util.List;
 
 /**
- * @description:
+ * {@code @Description:}
  */
 public class VO {
     private List<User> userList;

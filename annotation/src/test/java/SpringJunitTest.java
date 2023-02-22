@@ -7,7 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
- * @description: Spring集成Junit测试
+ * {@code @Description:} Spring集成Junit测试
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)

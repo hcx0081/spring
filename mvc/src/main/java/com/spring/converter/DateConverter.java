@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @description: 日期转换器
+ * {@code @Description:} 日期转换器
  */
 public class DateConverter implements Converter<String, Date> {
     @Override

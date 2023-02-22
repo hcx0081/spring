@@ -3,7 +3,7 @@ package com.spring.dao.impl;
 import com.spring.dao.UserDao;
 
 /**
- * @description:
+ * {@code @Description:}
  */
 
 public class UserDaoImpl implements UserDao {

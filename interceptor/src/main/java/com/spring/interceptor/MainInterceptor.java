@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * @description: 拦截器
+ * {@code @Description:} 拦截器
  */
 public class MainInterceptor implements HandlerInterceptor {
     

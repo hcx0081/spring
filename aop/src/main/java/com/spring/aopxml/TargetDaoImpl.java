@@ -1,8 +1,11 @@
 package com.spring.aopxml;
 
+import org.springframework.stereotype.Component;
+
 /**
- * @Description:
+ * {@code @Description:}
  */
+@Component
 public class TargetDaoImpl implements TargetDao {
     @Override
     public void save() {

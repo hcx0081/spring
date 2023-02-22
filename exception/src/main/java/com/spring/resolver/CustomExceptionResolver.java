@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @description: 自定义异常解析器
+ * {@code @Description:} 自定义异常解析器
  */
 public class CustomExceptionResolver implements HandlerExceptionResolver {
     

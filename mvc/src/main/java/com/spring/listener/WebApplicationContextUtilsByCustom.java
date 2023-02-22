@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationContext;
 import javax.servlet.ServletContext;
 
 /**
- * @description: 从ServletContext域中取出配置文件的工具类
+ * {@code @Description:} 从ServletContext域中取出配置文件的工具类
  */
 public class WebApplicationContextUtilsByCustom {
     /**

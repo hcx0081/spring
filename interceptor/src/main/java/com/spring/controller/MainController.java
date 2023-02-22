@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
- * @description:
+ * {@code @Description:}
  */
 @Controller
 public class MainController {

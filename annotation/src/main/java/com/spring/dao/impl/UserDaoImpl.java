@@ -9,13 +9,13 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 /**
- * @description:
+ * {@code @Description:}
  */
 // <bean id="userDao" class="com.spring.dao.impl.UserDaoImpl"></bean>
-// @Component("userDao")// 标注上id，相当于在配置文件配置了上面
+// @Component("userDao")
 @Repository("userDao")
 
-@Scope("singleton")// 标注Bean的作用范围
+@Scope("singleton")// 标注Bean的作用域
 public class UserDaoImpl implements UserDao {
     
     @Value("${jdbc.username}")
@@ -28,7 +28,7 @@ public class UserDaoImpl implements UserDao {
         System.out.println(username);
     }
     
-    @PostConstruct// 初始化执行的方法
+    @PostConstruct// 初始化后执行的方法
     public void init() {
         System.out.println("执行初始化方法");
     }

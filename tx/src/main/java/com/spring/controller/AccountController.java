@@ -4,7 +4,7 @@ import com.spring.service.AccountService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * @Description:
+ * {@code @Description:}
  */
 public class AccountController {
     public static void main(String[] args) {

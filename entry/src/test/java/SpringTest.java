@@ -5,13 +5,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * @description:
+ * {@code @Description:}
  */
 public class SpringTest {
-    
     @Test
     public void scopeTest() {
-        // 初始化Spring容器，加载配置文件
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         
         // 通过容器获取实例
@@ -22,11 +20,9 @@ public class SpringTest {
         UserDao userDao2 = applicationContext.getBean("userDao", UserDaoImpl.class);
         
         // 当配置文件中的scope为singleton
-        /* 配置文件一加载就调用无参构造器创建Bean实例 */
         System.out.println(userDao1 == userDao2);// true
         
         // 当配置文件中的scope为prototype
-        /* 当获取Bean时才调用无参构造器创建Bean实例 */
         // System.out.println(userDao1 == userDao2);// false
     }
     
@@ -35,19 +31,17 @@ public class SpringTest {
     public void lifeTest() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserDao userDao = applicationContext.getBean("userDao", UserDaoImpl.class);
-        System.out.println(userDao);/* 对象先创建才有初始化方法，所以先调用UserDaoImpl */
-        // UserDaoImpl调用了
-        // Bean初始化后执行初始化方法
+        System.out.println(userDao);/* 实例化Bean才有初始化方法，所以先调用无参构造器 */
+        // UserDaoImpl()调用了
+        // 执行初始化方法
         // com.spring.dao.impl.UserDaoImpl@77847718
-        
         ((ClassPathXmlApplicationContext) applicationContext).close();
-        // Bean销毁前执行销毁方法
+        // 执行销毁方法
     }
     
     
     @Test
     public void staticFactoryTest() {
-        // 初始化Spring容器，加载配置文件
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         // 通过容器获取实例
         UserDao userDao = applicationContext.getBean("userDao", UserDaoImpl.class);
@@ -56,7 +50,6 @@ public class SpringTest {
     
     @Test
     public void dynamicFactoryTest() {
-        // 初始化Spring容器，加载配置文件
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         // 通过容器获取实例
         UserDao userDao = (UserDao) applicationContext.getBean("userDao");

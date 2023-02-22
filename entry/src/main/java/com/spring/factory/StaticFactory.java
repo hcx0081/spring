@@ -4,7 +4,7 @@ import com.spring.dao.UserDao;
 import com.spring.dao.impl.UserDaoImpl;
 
 /**
- * @description: 静态工厂
+ * {@code @Description:} 静态工厂
  */
 public class StaticFactory {
     public static UserDao getUserDao() {

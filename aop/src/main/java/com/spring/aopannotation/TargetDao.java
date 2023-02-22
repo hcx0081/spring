@@ -1,7 +1,7 @@
 package com.spring.aopannotation;
 
 /**
- * @Description:
+ * {@code @Description:}
  */
 public interface TargetDao {
     void save();

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * @Description:
+ * {@code @Description:}
  */
 @Service
 public class AccountServiceImpl implements AccountService {
@@ -37,4 +37,3 @@ public class AccountServiceImpl implements AccountService {
         // 传统解决方法是在此处结束事务或回滚
     }
 }
-

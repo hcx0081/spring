@@ -3,7 +3,7 @@ package com.spring.aopxml;
 import org.aspectj.lang.ProceedingJoinPoint;
 
 /**
- * @Description:
+ * {@code @Description:}
  */
 public class MyAspect {
     /**
