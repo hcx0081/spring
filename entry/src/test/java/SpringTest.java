@@ -12,7 +12,7 @@ public class SpringTest {
     public void scopeTest() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         
-        // 通过容器获取实例
+        /* 通过容器获取实例 */
         // UserDao userDao1 = (UserDao) applicationContext.getBean("userDao");
         UserDao userDao1 = applicationContext.getBean("userDao", UserDaoImpl.class);
         

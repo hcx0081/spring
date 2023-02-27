@@ -1,4 +1,4 @@
-import com.spring.aopxml.TargetDao;
+import com.spring.aopannotation.TargetDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -12,8 +12,8 @@ import javax.annotation.Resource;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:applicationContext.xml")
 public class AopTest {
-    @Resource
-    private TargetDao target;// 一定要使用接口注入
+    // @Resource
+    // private TargetDao target;// 一定要使用接口注入
     @Resource
     private TargetDao targetDao;// 一定要使用接口注入
     
@@ -21,7 +21,7 @@ public class AopTest {
     public void aopxmlTest() {
         // ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
         // TargetDao target = applicationContext.getBean("target", TargetDao.class);
-        target.save();
+        // target.save();
     }
     
     @Test

@@ -29,7 +29,7 @@ public class DataSourceTest {
     
     @Test
     public void springDataSourceAnoTest() {
-        // Spring容器加载该注解配置类，实现全注解开发
+        // 实现全注解开发
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringConfiguration.class);
         DruidDataSource dataSource = applicationContext.getBean("dataSource", DruidDataSource.class);
         Connection connection = null;

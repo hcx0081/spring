@@ -30,7 +30,7 @@ public class CglibTest {
                 // 前置增强
                 advice.before();
                 
-                // 调用代理对象的任何方法实质执行的都是invoke方法
+                // 调用目标对象的方法
                 Object invoke = method.invoke(target, args);
                 
                 // 后置增强
