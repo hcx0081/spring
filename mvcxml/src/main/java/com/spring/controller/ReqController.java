@@ -17,7 +17,6 @@ public class ReqController {
     /*
      * http://localhost:8080/saySimp?username=zs&age=20
      * http://localhost:8080/saySimp?age=20&username=zs
-     * 业务方法中的参数名称要与请求数据的参数名称一致，即使顺序不一致，参数值也会自动映射匹配
      * */
     @RequestMapping("/saySimp")
     @ResponseBody
@@ -30,7 +29,6 @@ public class ReqController {
     /*
      * http://localhost:8080/sayPojo?username=zs&age=20
      * http://localhost:8080/sayPojo?age=20&username=zs
-     * 业务方法中的POJO类型的参数的属性名称要与请求数据的参数名称一致，即使顺序不一致，参数值也会自动映射匹配
      * */
     @RequestMapping("/sayPojo")
     @ResponseBody
@@ -42,7 +40,6 @@ public class ReqController {
     /*
      * http://localhost:8080/sayArray?strs=a&strs='b'&strs="c"
      * http://localhost:8080/sayArray?strs=a,'b',"c"
-     * 业务方法中的数组名称与请求数据的参数名称一致，参数值会自动映射匹配。
      * */
     @RequestMapping("/sayArray")
     @ResponseBody
@@ -57,8 +54,6 @@ public class ReqController {
      *
      * http://localhost:8080/sayVo?userList[0].username=zs&userList[0].age=20&userList[1].username=kobe&userList[1].age=24
      * 如果这样直接在地址栏访问，不可以，因为浏览器会编码符号
-     *
-     * 获取集合参数时，业务方法不支持直接使用集合形参进行数据绑定，要将集合参数包装到一个POJO中
      * */
     @RequestMapping("/sayVo")
     @ResponseBody

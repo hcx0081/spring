@@ -23,11 +23,11 @@ public class UserServlet extends HttpServlet {
         // ServletContext servletContext = request.getServletContext();
         ServletContext servletContext = this.getServletContext(); // 相当于上面
         
-        /* 手动从域中获取配置文件 */
+        /* 手动从ServletContext域中获取配置文件 */
         // ApplicationContext applicationContext = (ApplicationContext) servletContext.getAttribute("applicationContext");
-        /* 通过自定义工具类从域中获取配置文件 */
+        /* 通过自定义工具类从ServletContext域中获取配置文件 */
         // ApplicationContext applicationContext = WebApplicationContextUtilsByCustom.getApplicationContext(servletContext);
-        /* 通过Spring封装的工具类从域中获取配置文件 */
+        /* 通过Spring封装的工具类从ServletContext域中获取配置文件 */
         ApplicationContext applicationContext = WebApplicationContextUtils.getWebApplicationContext(servletContext);
         
         UserService userService = applicationContext.getBean("userService", UserServiceImpl.class);

@@ -10,7 +10,6 @@ import javax.servlet.http.HttpSession;
  * {@code @Description:} 拦截器
  */
 public class MainInterceptor implements HandlerInterceptor {
-    
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         HttpSession session = request.getSession();

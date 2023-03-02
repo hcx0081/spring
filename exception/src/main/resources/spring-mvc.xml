@@ -28,16 +28,16 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
     
     <!-- 配置简单映射异常处理器 -->
     <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
-        <!-- 定义默认的异常响应页面 -->
+        <!-- 设置默认的异常页面 -->
         <property name="defaultErrorView" value="WEB-INF/errorDefault"></property><!-- 视图名称没有后缀是因为配置了视图解析器 -->
         
-        <!-- 指定具体的不同类型的异常所对应的异常响应页面 -->
+        <!-- 指定具体的不同类型的异常对应的异常页面 -->
         <property name="exceptionMappings">
             <map>
                 <!-- 自定义异常时跳转 -->
-                <entry key="com.spring.exception.CustomException" value="errorCustom"></entry><!--视图名称没有后缀是因为配置了视图解析器-->
+                <entry key="com.spring.exception.CustomException" value="errorCustom"></entry>
                 <!-- 类型转换异常时跳转 -->
-                <entry key="java.lang.ClassCastException" value="errorCC"></entry><!-- 视图名称没有后缀是因为配置了视图解析器 -->
+                <entry key="java.lang.ClassCastException" value="errorCC"></entry>
             </map>
         </property>
     </bean>

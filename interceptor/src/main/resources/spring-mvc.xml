@@ -25,20 +25,18 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
     
     <!-- 配置拦截器 -->
     <mvc:interceptors>
-        
-        <!-- 定义在<mvc:interceptors>里面的自定义拦截器是全局拦截器，拦截所有请求 -->
+        <!-- 定义在<mvc:interceptors>内的自定义拦截器是全局拦截器，拦截所有的请求路径 -->
         <!-- <bean class="com.spring.interceptor.CustomInterceptor"></bean> -->
         
         <!-- 可以配置多个拦截器 -->
         <!-- 里面的元素必须严格遵守 <mvc:mapping/> -> <mvc:exclude-mapping/> -> <bean/> 的顺序编写 -->
         <mvc:interceptor>
-            <!-- 配置拦截路径，对哪些资源进行拦截操作，这里是对所有资源进行拦截操作 -->
+            <!-- 配置拦截路径，拦截指定的请求路径，这里是拦截所有的请求路径 -->
             <mvc:mapping path="/**"/>
-            <!-- 配置不需要拦截的资源路径 -->
+            <!-- 配置不需要拦截的请求路径 -->
             <mvc:exclude-mapping path="/"/>
             
-            
-            <!-- 定义在<mvc:interceptor>里面的拦截器对指定的路径请求才进行拦截 -->
+            <!-- 定义在<mvc:interceptor>内的拦截器是局部拦截器，拦截指定的请求路径 -->
             <bean class="com.spring.interceptor.CustomInterceptor"/>
         </mvc:interceptor>
     
@@ -47,7 +45,7 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
     
     <mvc:interceptors>
         <mvc:interceptor>
-            <!-- 只拦截访问主页方法，凡是执行访问主页方法都要进行拦截 -->
+            <!-- 只拦截访问主页的请求路径 -->
             <mvc:mapping path="/toindex"/>
             
             <bean class="com.spring.interceptor.MainInterceptor"></bean>

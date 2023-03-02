@@ -15,10 +15,8 @@ public class DateController {
      * http://localhost:8080/sayDate?date=2000/01/01   Sat Jan 01 00:00:00 CST 2000
      * http://localhost:8080/sayDate?date=2000-01-01   400
      *
-     * 配置日期转换器后
+     * 配置日期类型转换器之后
      * http://localhost:8080/sayDate?date=2000-01-01   Sat Jan 01 00:00:00 CST 2000
-     *
-     * 使用自定义转换器转换获取的日期字符串的格式
      * */
     @RequestMapping("/sayDate")
     @ResponseBody

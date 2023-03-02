@@ -9,9 +9,9 @@ import javax.servlet.http.HttpSession;
 /**
  * {@code @Description:}
  */
+// @ControllerAdvice
 @Controller
 public class MainController {
-    
     // 登录
     @RequestMapping("/login")
     public String login(HttpServletRequest request) {
@@ -35,5 +35,4 @@ public class MainController {
         System.out.println("访问成功");
         return "index";
     }
-    
 }

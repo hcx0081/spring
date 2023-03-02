@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
  * {@code @Description:} 自定义异常解析器
  */
 public class CustomExceptionResolver implements HandlerExceptionResolver {
-    
     @Override
     public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
         ModelAndView modelAndView = new ModelAndView();

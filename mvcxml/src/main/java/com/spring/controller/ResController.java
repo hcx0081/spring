@@ -28,28 +28,15 @@ public class ResController {
     
     @RequestMapping(value = "/sayMV")
     public ModelAndView sayMV() {
-        /*
-         * 模型 Model：封装数据
-         * 视图 View：展示数据
-         * */
         ModelAndView modelAndView = new ModelAndView();
-        // 设置模型数据，在model中存放数据，相当于Request域；在前端可以使用EL表达式取出
         modelAndView.addObject("username", "zs");
-        // 设置视图名称
         modelAndView.setViewName("success");
         return modelAndView;
     }
     
     @RequestMapping(value = "/sayMV2")
-    //　ModelAndView modelAndView 直接写在形参是因为Spring框架自动注入的，是它提供的，初始化创建好的
     public ModelAndView sayMV2(ModelAndView modelAndView) {
-        /*
-         * 模型 Model：封装数据
-         * 视图 View：展示数据
-         * */
-        // 设置模型数据，在model中存放数据，相当于Request域；在前端可以使用EL表达式取出
         modelAndView.addObject("username", "zs");
-        // 设置视图名称
         modelAndView.setViewName("success");
         return modelAndView;
     }
@@ -60,44 +47,36 @@ public class ResController {
      * */
     
     // 与下面类似，但是不推荐使用
-    @RequestMapping(value = "/sayStr")
-    // Tomcat服务器原生产生，框架负责传递
+    @RequestMapping(value = "/sayReq")
     public String sayStr(HttpServletRequest request) {
         request.setAttribute("username", "zs");
         return "success";
     }
     
-    @RequestMapping(value = "/sayStrM")
-    // Model model 直接写在形参是因为Spring框架自动注入的，是它提供的，初始化创建好的
-    public String sayStrM(Model model) {
-        /*
-         * 模型 Model：封装数据
-         * */
-        // 设置模型数据，在model中存放数据，相当于在Request域中存放数据；在前端可以使用EL表达式取出
-        model.addAttribute("username", "zs");
-        return "success";
-    }
     
     @RequestMapping(value = "/sayMap")
     public String sayMap(Map<String, Object> map) {
-        // 在map中存放数据，相当于在Request域中存放数据；在前端可以使用EL表达式取出
         map.put("username", "zs");
         return "success";
     }
     
     @RequestMapping(value = "/sayMM")
     public String sayMM(ModelMap modelMap) {
-        // 在modelMap中存放数据，相当于在Request域中存放数据；在前端可以使用EL表达式取出
         /* 两种方法都可以 */
         modelMap.put("username", "zs");
         // modelMap.addAttribute("username", "zs");
         return "success";
     }
     
+    @RequestMapping(value = "/sayM")
+    public String sayStrM(Model model) {
+        model.addAttribute("username", "zs");
+        return "success";
+    }
     
     @RequestMapping(value = "/sayS")
     public String sayS(HttpSession session) {
-        session.setAttribute("username", "hcx");
+        session.setAttribute("username", "zs");
         return "success";
     }
     

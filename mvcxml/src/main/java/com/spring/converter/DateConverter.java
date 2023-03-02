@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * {@code @Description:} 日期转换器
+ * {@code @Description:} 日期类型转换器
  */
 public class DateConverter implements Converter<String, Date> {
     @Override
@@ -21,10 +21,5 @@ public class DateConverter implements Converter<String, Date> {
             e.printStackTrace();
         }
         return date;
-    }
-    
-    @Override
-    public <U> Converter<String, U> andThen(Converter<? super Date, ? extends U> after) {
-        return Converter.super.andThen(after);
     }
 }

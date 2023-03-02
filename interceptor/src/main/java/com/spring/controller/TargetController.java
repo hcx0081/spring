@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class TargetController {
-    
     @RequestMapping("/target")
     public String show(Model model) {
-        System.out.println("目标资源执行");
+        System.out.println("执行处理器方法");
         model.addAttribute("name", "zs");
         return "index";
     }

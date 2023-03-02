@@ -24,7 +24,7 @@ public class ContextLoaderListenerByCustom implements ServletContextListener, Ht
         String contextConfigLocation = servletContext.getInitParameter("contextConfigLocation");
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext(contextConfigLocation);
         
-        /* 将Spring应用上下文对象存储到ServletContext域中 */
+        /* 将Spring容器对象存储到ServletContext域中 */
         servletContext.setAttribute("applicationContext", applicationContext);
         
         System.out.println("Spring容器创建完毕");

@@ -13,5 +13,21 @@
         <!-- 只不扫描@Controller注解 -->
         <!-- <context:exclude-filter type="annotation" expression="org.springframework.stereotype.FARController"/> -->
     </context:component-scan>
+    
+    <!-- 配置内部资源视图解析器 -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 配置前缀 -->
+        <property name="prefix" value="/WEB-INF/jsp/"></property>
+        <!-- 配置后缀 -->
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+    
+    
+    <!-- 配置文件上传解析器 -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="5242800"></property>
+        <property name="maxUploadSizePerFile" value="5242800"></property>
+        <property name="defaultEncoding" value="utf-8"></property>
+    </bean>
 
 </beans>

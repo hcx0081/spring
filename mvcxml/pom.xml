@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     
     <groupId>com.spring</groupId>
-    <artifactId>mvc</artifactId>
+    <artifactId>mvcxml</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>mvc</name>
     <packaging>war</packaging>
@@ -37,6 +37,12 @@
             <scope>test</scope>
         </dependency>
         
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+        </dependency>
         
         <!-- spring-webmvc，该依赖依赖于其他依赖，所以也就引入了其他依赖 -->
         <dependency>
