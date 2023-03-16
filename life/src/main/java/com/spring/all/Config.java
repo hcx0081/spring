@@ -1,10 +1,11 @@
-package com.spring.validation;
+package com.spring.all;
 
 import org.springframework.context.annotation.ComponentScan;
 
 /**
  * {@code @Description:}
  */
-@ComponentScan("com")
+@ComponentScan("com.spring.all")
 public class Config {
+
 }

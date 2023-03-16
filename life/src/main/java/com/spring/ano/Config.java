@@ -1,15 +1,23 @@
 package com.spring.ano;
 
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * {@code @Description:}
  */
 @ComponentScan("com")
-// @PropertySource("classpath:jdbc.properties")
-@Configuration
+// @Configuration
+// @Import(Person.class)
 public class Config {
-    // @Value("${jdbc.name}")
-    String name;
+    // @Bean
+    // Person person() {
+    //     System.out.println(1);
+    //     return new Person();
+    // }
+    
+    // @Bean
+    // PersonFactoryBean person() {
+    //     System.out.println(1);
+    //     return new PersonFactoryBean();
+    // }
 }

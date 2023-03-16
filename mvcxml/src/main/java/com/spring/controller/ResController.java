@@ -105,7 +105,6 @@ public class ResController {
      * */
     
     @RequestMapping(value = "/sayRB")
-    // 不标注该注解会返回一个视图，但是找不到该视图，所以需要标注该注解可以告知SpringMVC框架不进行视图跳转，而是将返回值直接写入HTTP响应体
     @ResponseBody
     public String sayRB() {
         return "String";
@@ -142,6 +141,6 @@ public class ResController {
         User user = new User();
         user.setUsername("zs");
         user.setAge(20);
-        return user;// SpringMVC将user自动转换为JSON格式字符串，是因为配置文件中配置了注解驱动
+        return user;// SpringMVC将user自动转换为JSON格式字符串，因为配置文件中配置了注解驱动
     }
 }

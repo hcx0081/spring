@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
     
     <groupId>com.spring</groupId>
-    <artifactId>entry</artifactId>
+    <artifactId>hello</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>entry</name>
+    <name>hello</name>
     <packaging>war</packaging>
     
     <properties>
