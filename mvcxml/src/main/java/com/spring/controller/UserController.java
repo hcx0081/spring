@@ -1,12 +1,12 @@
 package com.spring.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletRequest;
 
 /**
@@ -17,7 +17,7 @@ import javax.servlet.ServletRequest;
 public class UserController {
     
     @Autowired
-    ServletContext servletContext;
+    ApplicationContext applicationContext;
     
     // http://localhost:8080/user/say
     @RequestMapping(value = "/say")
@@ -27,9 +27,6 @@ public class UserController {
             
             System.out.println(name);
         }
-        
-        
-        System.out.println(servletContext.getNamedDispatcher("default"));
         return "success";
     }
 }
