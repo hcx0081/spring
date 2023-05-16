@@ -27,13 +27,16 @@ public class HelloController {
     
     @RequestMapping("/login")
     public String login() {
-        
-        for (String beanDefinitionName : applicationContext.getBeanDefinitionNames()) {
-            System.out.println(beanDefinitionName);
+        for (String name : applicationContext.getBeanDefinitionNames()) {
+            System.out.println(applicationContext.getBean(name) + "========" + name);
         }
-        
-        
         System.out.println("login");
         return "login";
+    }
+    
+    @ResponseBody
+    @RequestMapping("/user")
+    public String user(User user) {
+        return "user";
     }
 }

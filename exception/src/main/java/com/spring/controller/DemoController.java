@@ -38,7 +38,7 @@ public class DemoController {
     // 当发生类型转换异常时进行调用处理
     @ExceptionHandler(ClassCastException.class)
     public String CustomException(Exception e) {
-        System.out.println("打印错误信息:" + e);// 打印错误信息:java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Integer
+        System.out.println("打印错误信息:" + e);// 打印错误信息：java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Integer
         // 跳转到指定页面
         return "errorCC";
     }
