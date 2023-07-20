@@ -6,10 +6,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-    
+
     <!-- 目标对象 -->
     <!-- <bean id="target" class="com.spring.aopxml.TargetDaoImpl"></bean> -->
-    
+
     <!-- 切面对象 -->
     <!-- <bean id="myAspect" class="com.spring.aopxml.MyAspect"></bean> -->
     <!-- 配置织入 -->
@@ -30,8 +30,8 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
             <aop:after-throwing method="throwing" pointcut-ref="myPointCut"></aop:after-throwing>
         </aop:aspect>
     </aop:config> -->
-    
-    
+
+
     <context:component-scan base-package="com.spring.aopannotation"></context:component-scan>
     <!-- 开启基于注解的声明式AspectJ支持生成代理对象 -->
     <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
